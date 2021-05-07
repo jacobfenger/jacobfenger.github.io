@@ -1,0 +1,97 @@
+.game {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.game--field {
+    background-color: #14bdac;
+}
+
+.game--overlay {
+    display: none;
+    padding: 10px;
+}
+
+.game--winner {
+    color: #666666;
+    text-align: center;
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.game--grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 350px;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    position: center;
+    margin: 0 auto; // Used to center the whole grid
+}
+
+.game--row {
+    
+}
+
+.game--cell {
+    position: center;
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    font-weight: bold;
+    border: 3px solid #666666;
+}
+
+.game--cell:hover {
+    cursor: pointer;
+}
+
+#cell_0,#cell_1,#cell_2 {
+    border-left: none
+}
+
+#cell_0,#cell_3,#cell_6 {
+    border-top: none;
+}
+
+#cell_6,#cell_7,#cell_8 {
+    border-right: none;
+}
+
+#cell_2,#cell_5,#cell_8 {
+    border-bottom: none;
+}
+
+.game--circle {
+    display: none;
+}
+
+.game--circle circle {
+    stroke: #f5f6f7;
+}
+
+.game--cross {
+    display: none;
+    fill: #666666;
+}
+
+
+.game--restart {
+    position: center;
+    text-align: center;
+    background-color: #f5f6f7;
+    height: 50px;
+    line-height: 50px;
+    color: #14bdac;
+    font-size: 22px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    
+}
+
+.game--restart:hover {
+    cursor: pointer;
+}
