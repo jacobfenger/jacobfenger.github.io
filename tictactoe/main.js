@@ -26,6 +26,12 @@ const playMove = e => {
             document.querySelector(".game--overlay").style.display = "block";
             winner_found = true;
         }
+        // Tie game if all moves have been made and no winner is found
+        if (move_num == 9) {
+            document.querySelector(".game--winner").innerHTML = "Tie Game!";
+            document.querySelector(".game--overlay").style.display = "block";
+        }
+
         move_num++;
     }
 };
@@ -52,7 +58,7 @@ const check_winner = () => {
     return false;
 };
 
-// Helper function to ease the winning checks for vertical wins
+// Helper function to ease the winning checks for wins
 const check_line = (a, b, c) => {
     return (
       board[a] == board[b] && board[b] == board[c] &&
@@ -74,5 +80,7 @@ function restart() {
         }
     }
     document.querySelector(".game--overlay").style.display = "none";
+    document.querySelector(".game--winner").innerHTML = "Winner!";
     winner_found = false;
+    move_num = 1;
 }
