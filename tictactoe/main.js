@@ -66,9 +66,8 @@ const check_line = (a, b, c) => {
     );
 };
 
+// This will reset the board and any overlay/meta information
 function restart() {
-    console.log("Restarting game...");
-    
     // Iterate through each cell and reset everything
     for (let i = 0; i < 9; i++) {        
         var cell = document.querySelector(`#cell_${i}`);
