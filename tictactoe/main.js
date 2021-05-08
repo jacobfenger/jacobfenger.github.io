@@ -27,7 +27,7 @@ const playMove = e => {
             winner_found = true;
         }
         // Tie game if all moves have been made and no winner is found
-        if (move_num == 9) {
+        if (!winner_found && move_num == 9) {
             document.querySelector(".game--winner").innerHTML = "Tie Game!";
             document.querySelector(".game--overlay").style.display = "block";
         }
